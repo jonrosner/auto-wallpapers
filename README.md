@@ -9,6 +9,16 @@ It was developed and tested only on Linux Mint 18.3 Sylvia. There is no guarante
 The website used in this project to download the wallpapers from is not owned by me, nor are the wallpapers.
 It is just used to show the functionality and should be replaced with your own site :)
 
+## Dependencies
+
+All dependencies are pre-installed on Ubuntu-based systems.
+
+```
+curl
+gunzip
+grep
+```
+
 ## Installation
 
 1. Clone the repository
@@ -17,18 +27,9 @@ It is just used to show the functionality and should be replaced with your own s
 $ git clone https://github.com/joroGER/auto-wallpapers.git
 ```
 
-2. Move your current working directory into the newly cloned repository
+1. Move your current working directory into the newly cloned repository
 
-3. Make sure `python3` and `beautifulsoup4` are installed
-
-```bash
-$ which python3
-/usr/bin/python3
-$ python3 -c "import bs4" && echo $?
-0
-```
-
-4. Allow execution to the setup script and run it
+2. Allow execution to the setup script and run it
 
 ```bash
 $ sudo chmod +x setup.sh && ./setup.sh
@@ -41,6 +42,10 @@ $ sudo chmod +x setup.sh && ./setup.sh
 $ crontab -e
 Edit this file to introduce tasks to be run by cron.
 ...
-*/10 *    * * *   .../auto-wallpaper/download.sh
+*/10 *    * * *   .../auto-wallpapers/download.sh
 
 ```
+
+# Change frequency
+
+To change the frequency of wallpaper changes simply change the frequency of the cron job with `crontab -e`
