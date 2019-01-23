@@ -7,7 +7,7 @@ from os import getcwd
 from os import path
 import zlib
 
-CWD = getcwd()
+CWD = path.dirname(path.realpath(__file__))
 
 # Get random url page
 page_nr = randint(0, 172)

@@ -1,2 +1,3 @@
 #!/bin/bash
-python3 $PWD/wallpapers.py > $PWD/logs.txt 2>&1
+basename="$(dirname $0)"
+python3 $basename/wallpapers.py > $basename/logs.txt 2>&1
