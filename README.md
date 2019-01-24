@@ -1,22 +1,16 @@
-# Linux Auto Wallpaper downloader
+# Linux automatic Desktop Wallpaper Slideshow
 
 This project showcases how to automatically download wallpapers from the web and set them as your desktop background image.
 
 It was developed and tested only on Linux Mint 18.3 Sylvia. There is no guarantee if it will work on any other system.
 
-## Disclaimer
-
-The website used in this project to download the wallpapers from is not owned by me, nor are the wallpapers.
-It is just used to show the functionality and should be replaced with your own site :)
-
 ## Dependencies
 
-All dependencies are pre-installed on Ubuntu-based systems.
+All dependencies are pre-installed on Ubuntu-based systems. If for some reason they are not pre-installed you can install them manually
 
-```
-curl
-gunzip
-grep
+```bash
+$ sudo apt-get update
+$ sudo apt-get install curl zip unzip grep
 ```
 
 ## Installation
@@ -27,16 +21,16 @@ grep
 $ git clone https://github.com/joroGER/auto-wallpapers.git
 ```
 
-1. Move your current working directory into the newly cloned repository
+2. Move your current working directory into the newly cloned repository
 
-2. Allow execution to the setup script and run it
+3. Allow execution to the setup script and run it
 
 ```bash
 $ sudo chmod +x setup.sh && ./setup.sh
 [INFO] Cron job added.
 ```
 
-5. Check your crontab if everything went OK
+4. Check your crontab if everything went OK
 
 ```bash
 $ crontab -e
@@ -46,6 +40,10 @@ Edit this file to introduce tasks to be run by cron.
 
 ```
 
-# Change frequency
+## Change frequency
 
 To change the frequency of wallpaper changes simply change the frequency of the cron job with `crontab -e`
+
+## Disclaimer
+
+The website used to scrape the images does not belong to me. All images are royalty free stock images. If you find your image falsely being shown here as roalty free picture, feel free to contact me.
