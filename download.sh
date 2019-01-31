@@ -35,6 +35,9 @@ rev)_3840x2400.jpg
 
 # Download new image and replace current wallpaper
 curl -s -o $basename/wallpaper_dowload.jpg $IMGURL
-mv $basename/wallpaper_dowload.jpg $basename/current_wallpaper.jpg
+if [ $? -eq 0 ]; 
+then
+    mv $basename/wallpaper_dowload.jpg $basename/current_wallpaper.jpg
+fi
 
 
