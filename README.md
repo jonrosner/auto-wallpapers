@@ -6,7 +6,7 @@ It was developed and tested only on Linux Mint 18.3 Sylvia. There is no guarante
 
 ## Dependencies
 
-All dependencies are pre-installed on Ubuntu-based systems. If for some reason they are not pre-installed you can install them manually
+All dependencies are pre-installed on Ubuntu-based systems. If for some reason they are not pre-installed you can install them manually.
 
 ```bash
 $ sudo apt-get update
